@@ -3,13 +3,13 @@ TARGETlinux=linux
 TARGETMACOS=MacOS
 TARGETWINDOWS=Windows
 
-make linux:
+linux:
 			docker build . -t ${TARGETARCH}
-make arm:
+arm:
 			docker build
-make Windows:
+Windows:
 			docker build
-make MacOS:
+MacOS:
 			docker build 
 clean:
 			docker rmi <IMAGE_TAG>
