@@ -1,15 +1,15 @@
 TARGETARCH=arm64
-TARGETlinux=linux
+TARGETLINUX=linux
 TARGETMACOS=MacOS
 TARGETWINDOWS=Windows
 
 linux:
-			docker build . -t ${TARGETARCH}
+			docker build . -t ${TARGETARCH}-${TARGETlinux}
 arm:
-			docker build
+			docker build . -t ${TARGETARCH}
 Windows:
-			docker build
+			docker build . -t ${TARGETWINDOWS}-${TARGETARCH}
 MacOS:
-			docker build 
+			docker build . -t ${TARGETMACOS}-${TARGETARCH}
 clean:
 			docker rmi <IMAGE_TAG>
