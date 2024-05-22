@@ -11,9 +11,7 @@ linux:
 windows:
     docker build -t $(WINDOWS_IMAGE_NAME):$(WINDOWS_IMAGE_TAG) -f Dockerfile.windows .
 
-clean-linux:
-    docker rmi $(LINUX_IMAGE_NAME):$(LINUX_IMAGE_TAG)
+clean:
+    docker rmi build/
 
-clean-windows:
-    docker rmi $(WINDOWS_IMAGE_NAME):$(WINDOWS_IMAGE_TAG)
 
