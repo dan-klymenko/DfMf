@@ -1,8 +1,10 @@
-# Variables
-LINUX_IMAGE_NAME := myapp-linux
-LINUX_IMAGE_TAG := latest
-WINDOWS_IMAGE_NAME := myapp-windows
-WINDOWS_IMAGE_TAG := latest
+APP=
+TARGETARCH=arm64
+TARGETLINUXOS=linux
+TARGETWINDOWSOS=windows
+TARGETMACOS=macos
+IMAGE_TAG := latest
+
 
 # Commands
 linux:
@@ -13,7 +15,10 @@ windows:
 
 macos:
 
+arm:
+	
+
 clean:    
-	docker rmi -f .
+	docker rmi IMAGE_TAG
 
 
