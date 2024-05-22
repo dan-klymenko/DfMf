@@ -3,7 +3,7 @@ TARGETARCH=arm64
 TARGETLINUXOS=linux
 TARGETWINDOWSOS=windows
 TARGETMACOS=macos
-IMAGE_TAG := latest
+image_tag := latest
 
 
 # Commands
@@ -19,6 +19,6 @@ arm:
 	
 
 clean:    
-	docker rmi IMAGE_TAG
+	docker rmi image_tag
 
 
