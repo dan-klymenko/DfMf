@@ -14,7 +14,7 @@ windows:
 macos:
     
 
-clean:
-    docker rmi build/
+clean:    
+    docker rmi -f
 
 
