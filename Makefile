@@ -6,14 +6,14 @@ WINDOWS_IMAGE_TAG := latest
 
 # Commands
 linux:
-    docker build -t $(LINUX_IMAGE_NAME):$(LINUX_IMAGE_TAG) -f Dockerfile.linux .
+	docker build -t $(LINUX_IMAGE_NAME):$(LINUX_IMAGE_TAG) -f Dockerfile.linux .
 
 windows:
-    docker build -t $(WINDOWS_IMAGE_NAME):$(WINDOWS_IMAGE_TAG) -f Dockerfile.windows .
+	docker build -t $(WINDOWS_IMAGE_NAME):$(WINDOWS_IMAGE_TAG) -f Dockerfile.windows .
 
 macos:
 
 clean:    
-    docker rmi -f .
+	docker rmi -f .
 
 
