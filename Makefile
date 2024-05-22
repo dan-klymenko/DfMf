@@ -5,10 +5,10 @@ WINDOWS_IMAGE_NAME := myapp-windows
 WINDOWS_IMAGE_TAG := latest
 
 # Commands
-build-linux:
+linux:
     docker build -t $(LINUX_IMAGE_NAME):$(LINUX_IMAGE_TAG) -f Dockerfile.linux .
 
-build-windows:
+windows:
     docker build -t $(WINDOWS_IMAGE_NAME):$(WINDOWS_IMAGE_TAG) -f Dockerfile.windows .
 
 clean-linux:
