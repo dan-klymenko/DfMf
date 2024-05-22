@@ -11,6 +11,9 @@ linux:
 windows:
     docker build -t $(WINDOWS_IMAGE_NAME):$(WINDOWS_IMAGE_TAG) -f Dockerfile.windows .
 
+macos:
+    
+
 clean:
     docker rmi build/
 
